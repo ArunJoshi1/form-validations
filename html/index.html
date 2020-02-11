@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <!-- multiple select box -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Employee Registration Forms</h1>
+        <form id="myform">
+            <div class="form-group row">
+                <div class="col-md-4"> <label for="fname">First Name</label></div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="fname" id="fname" aria-describedby="emailHelp"
+                        placeholder="Enter First Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"><label for="lname">Last Name</label></div>
+                <div class="col-md-8"><input type="text" class="form-control" name="lname" id="lname"
+                        placeholder="Enter Last Name"></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"> <label for="email">Email</label>
+                </div>
+                <div class="col-md-8"> <input type="email" class="form-control" name="email" id="email"
+                        placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"><label for="pno">Phone Number</label></div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="pno" id="pno" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"> <label for="sex">Sex</label></div>
+                <div class="col-md-8 row">
+                    <div class="col-md-4"> <input type="radio" name="sex" autocomplete="off" value="Male"> Male</div>
+                    <div class="col-md-4"> <input type="radio" name="sex" autocomplete="off" value="female"> Female
+                    </div>
+                    <div class="col-md-4"><input type="radio" name="sex" autocomplete="off" value="others"> Others</div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"><label for="projects">Projects</label></div>
+                <div class="col-md-8">
+                    <select name="projects" id="projects">
+                        <option value="">Select projects</option>
+                        <option value="pro1">Project One</option>
+                        <option value="pro2">Project two</option>
+                        <option value="pro3">Project three</option>
+                        <option value="pro4">Project four</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"><label for="country">Country</label></div>
+                <div class="col-md-8"><select name="country" id="country">
+                        <option value="">Select Option</option>
+                    </select></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"> <label for="state">State</label></div>
+                <div class="col-md-8"> <select name="state" id="state">
+                        <option value="">Select State</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8 addIcon">
+                    <label for="skill">Add Skill</label>
+                    <input type="button" class="btn btn-success" name="add-skill" id="add-skill" value="Add Skill">
+                    <div id="inp">
+                        
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="terms-conditions">
+                <label class="form-check-label" for="exampleCheck1">Accept Terms and Conditions..</label>
+            </div> -->
+            <button type="button" class="btn btn-primary" id="btn-submit">Submit</button>
+        </form>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="alert-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <table class="table">
+                            <thead>
+
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="save-changes">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html
